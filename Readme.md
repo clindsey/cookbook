@@ -11,7 +11,7 @@ recipes/delicious-burrito.yaml needs to have a corresponding image, public/image
 Then add it to the site with `rake recipes:add[delicious-burrito]`
 
 example recipe.yaml -
-```
+```yaml
 ---
 title: Chocolate Chunk Cookies
 date: 20111102
