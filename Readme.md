@@ -1,5 +1,7 @@
 # Cookbook
 
+#### MIT License, Chris Lindsey, 2011
+
 ### How I Use This
 As I'm baking or cooking, I usually take notes using my iPhone, which syncs to iCloud. At the end of the night/week, I'll sit down at my computer and go through the notes listed in my Mail app (it syncs notes across my iOS devices), and do some simple work to convert them to YAML format, which I upload to the `recipes/` folder in this project, along with a picture in the `public/images/` folder.
 
@@ -11,7 +13,7 @@ recipes/delicious-burrito.yaml needs to have a corresponding image, public/image
 Then add it to the site with `rake recipes:add[delicious-burrito]`
 
 example recipe.yaml -
-```yaml
+
     ---
     title: Chocolate Chunk Cookies
     date: 20111102
@@ -42,6 +44,3 @@ example recipe.yaml -
     categories:
       - Cookies
       - Chocolate
-```
-
-#### MIT License, 2011
