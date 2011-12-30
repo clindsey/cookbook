@@ -1,0 +1,3 @@
+cookbook.db
+recipes/*.yaml
+public/images/*.png

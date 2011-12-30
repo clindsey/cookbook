@@ -1,0 +1,26 @@
+<header class="hero-unit">
+  <h1><%= @recipe.title %></h1>
+  <p><%= @recipe.description %></p>
+</header>
+<div class="row recipe">
+  <div class="span6">
+    <span>
+      <img class="thumbnail" src="/cookbook/images/<%= @recipe.slug %>.png" width="262" height="175" alt="<%= @recipe.title %>">
+    </span>
+  </div>
+  <div class="span8">
+    <h3>Ingredients</h3>
+    <ul>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient.body %></li>
+      <% end %>
+    </ul>
+    <h3>Directions</h3>
+    <ul>
+      <% @recipe.directions.each do |direction| %>
+        <li><%= direction.body %></li>
+      <% end %>
+    </ul>
+    <a class="btn primary pull-right" href="/cookbook/">Go Back</a>
+  </div>
+</div>

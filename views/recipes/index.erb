@@ -1,0 +1,46 @@
+<header class="hero-unit">
+  <h1>Chris Lindsey's Cookbook</h1>
+</header>
+<section id="recipes">
+  <div class="row">
+    <div class="span10">
+      <h1>Showing All Recipes</h1>
+    </div>
+    <div class="span6">
+    </div>
+  </div>
+  <div class="row">
+    <div class="span16" id="list-container">
+      <div class="recipes-frame">
+        <ul id="recipes-list">
+          <% for recipe in @recipes %>
+            <li class="row recipe">
+              <div class="span6">
+                <span>
+                  <img class="thumbnail" src="/cookbook/images/<%= recipe.slug %>.png" width="262" height="175" alt="<%= recipe.title %>">
+                </span>
+              </div>
+              <div class="span8">
+                <a href="/cookbook/recipes/<%= recipe.slug %>" class="short-description">
+                  <h2><%= recipe.title %></h2>
+                  <p>
+                    <% recipe.categories.each do |category| %>
+                      <span class="label"><%= category.title %></span>
+                    <% end %>
+                  </p>
+                  <p><%= recipe.description %></p>
+                </a>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    jQuery('#recipes-list').find('a.short-description p').dotdotdot();
+  });
+</script>
