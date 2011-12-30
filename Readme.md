@@ -1,7 +1,7 @@
 # Cookbook
 
 ### How I Use This
-As I'm baking or cooking, I usually take notes using my iPhone, which syncs to iCloud. At the end of the night/week, I'll sit down at my computer and go through the notes listed in my Mail app (it syncs notes across my iOS devices), and do some simple work to convert them to YAML format, which I upload to the `recipes` folder in this project, along with a picture.
+As I'm baking or cooking, I usually take notes using my iPhone, which syncs to iCloud. At the end of the night/week, I'll sit down at my computer and go through the notes listed in my Mail app (it syncs notes across my iOS devices), and do some simple work to convert them to YAML format, which I upload to the `recipes/` folder in this project, along with a picture in the `public/images/` folder.
 
 ### How You Should Use It
 Naming convention is important here, make sure image and recipe file names are in slug format (SEO friendly, dasherized).
