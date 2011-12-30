@@ -6,8 +6,9 @@ As I'm baking or cooking, I usually take notes using my iPhone, which syncs to i
 ### How You Should Use It
 Naming convention is important here, make sure image and recipe file names are in slug format (SEO friendly, dasherized).
 
-recipes/delicious-burrito.yaml needs to have a corresponding image, public/images/delicious-burrito.png
-add it to the site with `rake recipes:add[delicious-burrito]`
+recipes/delicious-burrito.yaml needs to have a corresponding image, public/images/delicious-burrito.png.
+
+Then add it to the site with `rake recipes:add[delicious-burrito]`
 
 example recipe.yaml -
 ```
