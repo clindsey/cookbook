@@ -15,7 +15,11 @@ namespace :recipes do
                         :description => recipe_file["description"]
     recipe_file["categories"].each do |category_title|
       category = Category.first_or_create :title => category_title
-      recipe.categories << category
+      if category.valid?
+        recipe.categories << category
+      else
+        "Failed to auto add category!"
+      end
     end
     recipe_file["ingredients"].each do |ingredient_body|
       ingredient = Ingredient.create :body => ingredient_body
@@ -65,9 +69,13 @@ namespace :categories do
 
     require './app'
 
-    c = Category.new :title => title
-
-    puts c.save!
+    category = Category.new :title => title
+    if category.valid?
+      puts c.save!
+      puts "Added category!"
+    else
+      puts "Failed to add category!"
+    end
   end
 end
 

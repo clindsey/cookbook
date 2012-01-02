@@ -42,10 +42,15 @@ end
 class Category
   include DataMapper::Resource
 
-  property :title, String, :required => true, :key => true
+  property :title, String, :required => true
+  property :slug, String, :required => true, :key => true
 
   has n, :categorizations
   has n, :recipes, :through => :categorizations
+
+  before :valid? do
+    self.slug = self.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  end
 end
 
 class Categorization

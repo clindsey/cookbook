@@ -1,0 +1,23 @@
+<li class="recipe">
+  <div class="recipe-border">
+    <div class="row">
+      <div class="span5">
+        <span class="thumbnail-well">
+          <img class="thumbnail" src="/cookbook/images/<%= recipe.slug %>.png" width="262" height="175" alt="<%= recipe.title %>">
+        </span>
+      </div>
+      <div class="span8">
+        <a href="/cookbook/recipes/<%= recipe.slug %>" class="short-description">
+          <h2><%= recipe.title %></h2>
+          <p>
+            <% recipe.categories.each do |category| %>
+              <span class="label"><%= category.title %></span>
+            <% end %>
+          </p>
+          <p><%= recipe.description %></p>
+          <em>Read more &raquo;</em>
+        </a>
+      </div>
+    </div>
+  </div>
+</li>
