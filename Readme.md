@@ -16,7 +16,7 @@ example recipe.yaml -
 
     ---
     title: Chocolate Chunk Cookies
-    date: 20111102
+    date: 2011 Nov 02
 
     description:  >
       Pretty good, kinda dry, medium thick, tapers / not uniform thickness. Very dry after several days, maybe because of nuts?
