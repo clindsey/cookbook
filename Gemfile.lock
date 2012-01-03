@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.2.6)
     bcrypt-ruby (3.0.1)
+    chronic (0.6.6)
     data_objects (0.10.7)
       addressable (~> 2.1)
     datamapper (1.2.0)
@@ -70,6 +71,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chronic
   datamapper
   dm-sqlite-adapter
   sinatra

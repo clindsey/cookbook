@@ -7,17 +7,37 @@
  *    Recipes Filter Specific
 */
 
-
 /* Tag Overrides */
 body {
-  margin-top: 60px;
+  background-color: #FBF7E6;
+  font-family: ff-tisa-web-pro, Georgia, sans-serif;
 }
 
 section {
   padding-top: 60px;
 }
 
+a:link,
+a:visited {
+  color: #F93;
+}
+
+a:hover {
+  color: #33CC33;
+}
+
+p {
+  line-height: 20px;
+  font-size: 14px;
+}
+
 /* Generics for Index/Show */
+body > div.container {
+  background-color: #FFF;
+  border: 1px solid #D3CABD;
+  padding:0 32px;
+}
+
 .recipe span.thumbnail-well {
   float: left;
   padding: 4px;
@@ -29,6 +49,10 @@ section {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.modal a.close {
+  color: #000;
 }
 
 .recipe span.thumbnail-well img.thumbnail {
@@ -56,9 +80,23 @@ section {
   margin-top: 18px;
 }
 
+#recipes-list li.recipe a.short-description span.date {
+  font-size: 12px;
+  font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
 #recipes-list-header,
 #recipes-list li.recipe div.recipe-border > div.row {
   margin-left: 0;
+}
+
+#recipes-list li.recipe a.short-description h2 {
+  color: #F93;
+}
+
+#recipes-list li.recipe a.short-description em {
+  font-style: normal;
+  color: #F93;
 }
 
 #recipes-list li.recipe div.recipe-border:hover {
@@ -76,11 +114,11 @@ section {
 }
 
 #recipes-list li.recipe a.short-description:hover h2 {
-  color: #0069D6;
+  color: #33CC33;
 }
 
 #recipes-list li.recipe a.short-description:hover em {
-  color: #0069D6;
+  color: #33CC33;
   text-decoration: underline;
 }
 
@@ -93,13 +131,8 @@ section {
   margin: -16px -60px -24px -320px;
 }
 
-#recipes-list li.recipe a.short-description em {
-  font-style: normal;
-  color: #0069D6;
-}
-
 #recipes-list li.recipe a.short-description p {
-  max-height: 90px;
+  max-height: 80px;
   overflow: hidden;
 }
 

@@ -4,6 +4,8 @@ namespace :recipes do
     puts "Inserting new recipe"
 
     require 'yaml'
+    require 'chronic'
+    require 'date'
 
     recipe_file = YAML::load(File.open("recipes/#{args[:recipe_name]}.yaml"))
     puts recipe_file["title"]
@@ -11,7 +13,7 @@ namespace :recipes do
     require './app'
 
     recipe = Recipe.new :title => recipe_file["title"],
-                        :date => recipe_file["date"],
+                        :date => Chronic.parse(recipe_file["date"]).strftime('%A %B %e, %Y'),
                         :description => recipe_file["description"]
     recipe_file["categories"].each do |category_title|
       category = Category.first_or_create :title => category_title
