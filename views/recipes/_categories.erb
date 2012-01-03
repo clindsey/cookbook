@@ -1,0 +1,16 @@
+<div id="recipes-filter" class="modal hide">
+  <div class="modal-header">
+    <a href="#" class="close">x</a>
+    <h3>Recipes by Ingredients</h3>
+  </div>
+  <div class="modal-body">
+    <ul class="media-grid">
+      <li>
+        <a href="/cookbook">All</a>
+      </li>
+      <%= partial :'recipes/_category', :collection => categories %>
+    </ul>
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>

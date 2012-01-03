@@ -17,6 +17,10 @@ section {
   padding-top: 60px;
 }
 
+::selection {
+  background: rgba(255, 255, 150, 0.9);
+}
+
 a:link,
 a:visited {
   color: #F93;
@@ -26,7 +30,8 @@ a:hover {
   color: #33CC33;
 }
 
-p {
+p,
+li {
   line-height: 20px;
   font-size: 14px;
 }
@@ -37,6 +42,18 @@ body > div.container {
   border: 1px solid #D3CABD;
   padding:0 32px;
 }
+
+span.date {
+  display: block;
+}
+
+span.date,
+span.ingredient {
+  font-size: 12px;
+  font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Arial, sans-serif;
+  color: #BBB;
+}
+
 
 .recipe span.thumbnail-well {
   float: left;
@@ -74,15 +91,8 @@ body > div.container {
   border-top: solid 1px #DDD;
 }
 
-#recipes-list li.recipe div.recipe-border {
-  padding-top: 16px;
-  margin-bottom: 18px;
-  margin-top: 18px;
-}
-
-#recipes-list li.recipe a.short-description span.date {
-  font-size: 12px;
-  font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Arial, sans-serif;
+#recipes-list li.recipe a.short-description span.ingredient {
+  margin-right: 8px;
 }
 
 #recipes-list-header,
@@ -99,14 +109,21 @@ body > div.container {
   color: #F93;
 }
 
+#recipes-list li.recipe div.recipe-border {
+  padding-top: 16px;
+  margin-bottom: 18px;
+  margin-top: 18px;
+  border: solid 2px rgba(0, 0, 0, 0);
+}
+
 #recipes-list li.recipe div.recipe-border:hover {
-  background-color: whiteSmoke;
+  border: solid 2px #33CC33;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 1px rgba(48, 211, 48, 0.5);
+     -moz-box-shadow: 0 1px 1px rgba(48, 211, 48, 0.5);
+          box-shadow: 0 1px 1px rgba(48, 211, 48, 0.5);
 }
 
 #recipes-list li.recipe a.short-description:hover {
@@ -137,6 +154,13 @@ body > div.container {
 }
 
 /* Show Specific */
+#recipe-view span.thumbnail-well {
+  margin-left: 20px;
+}
+
+#recipe-view h3 {
+  border-bottom: dashed 2px #DDD;
+}
 
 /* Recipes Filter Specific */
 #recipes-filter ul li a {

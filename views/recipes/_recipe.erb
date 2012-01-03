@@ -11,10 +11,12 @@
           <h2><%= recipe.title %></h2>
           <span class="date"><%= recipe.date %></span>
           <p><%= recipe.description %> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet fermentum quam. Nam odio dolor, interdum ut accumsan in, volutpat facilisis urna. Duis eget felis erat. Cras vel rhoncus nulla. Nulla lacus urna, fringilla sit amet semper eget, tincidunt sed sem. Praesent tellus ante, aliquam ut varius a, tincidunt ut augue. Nullam a sapien in augue tincidunt placerat fringilla eu purus. Aenean sed sem id nibh tempus iaculis. Etiam sed lectus sapien, id iaculis tortor. Nunc aliquam mi a leo ornare nec congue nisl luctus. Praesent tincidunt dictum vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean adipiscing adipiscing eros ut cursus. Vestibulum neque leo, scelerisque eget sagittis eu, sagittis ut elit.</p>
-          <% recipe.categories.each do |category| %>
-            <span class="left label warning"><%= category.title %></span>
-          <% end %>
-          <em class="left pull-right">Read more &raquo;</em>
+          <p>
+            <% recipe.categories.each do |category| %>
+              <span class="left ingredient"><%= category.title %></span>
+            <% end %>
+            <em class="left pull-right">Read more &raquo;</em>
+          </p>
         </a>
       </div>
     </div>
